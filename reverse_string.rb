@@ -1,12 +1,15 @@
 # Reverse array
 def reverse_string(str)
    str = str.chars
-   new_str = ""
+   new_str, i = "", 0
    while i < (str.size) / 2
-    str[i], str[(str.size-1)-i] = str[(str.size-1)-i], str[i]
+      # Like a, b = b, a
+      str[i], str[(str.size-1)-i] = str[(str.size-1)-i], str[i]
+      i += 1
    end
+   # Join new string
    for i in str
-    new_str += i
+      new_str += i
    end
    p new_str
 end
